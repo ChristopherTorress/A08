@@ -13,81 +13,99 @@
 
 /* default styles */
 body {
-	font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-	width: 80%;
-	margin: auto;
-	border: 2px solid var(--accent-color);
+  width: 80%;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: calc(0.9em + 0.2vw);
+  line-height: 1.5;
+  color: #333;
 }
-a:hover, a:focus{
-	font-style: italic;
-	color: var(--accent-color);
-}
+
 h1, h2, h3, p, ul {
-	padding: .5em 0;
-}
-h1 {
-	font-size: 150%;
-}
-h2 {
-	font-size: 130%;
-	color: var(--accent-color);
-}
-h3 {
-	font-size: 105%;
-}
-ul {
-	margin-left: 2em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
-/* the styles for the header */
 header {
-	border-bottom: 2px solid var(--accent-color);
-	background-image: linear-gradient(
-	    30deg, var(--gradient-color) 0%, white 30%, white 65%, var(--gradient-color) 100%);
-	& h2 {
-		font-size: 175%;
-		padding: .5em 0 0 0;
-	}
-	& h3 {
-		font-size: 130%;
-		font-style: italic;
-		padding-bottom: 1em;
-	}
-	& img {
-		float: left;
-		margin: .75em 1em;
-	}
+  text-align: center;
+  line-height: 1.2;
+  border-bottom: 3px solid #333;
+  padding-bottom: 1em;
 }
 
-/* the styles for the main content */
-main {
-	padding: 0 1em 1em;
-	& h1 {
-		border-top: 2px solid var(--accent-color);
-		border-bottom: 2px solid var(--accent-color);
-	}
-	& blockquote {
-		font-style: italic;
-		padding-left: 1em;
-	}
-	& img {
-		border: 4px double var(--accent-color);
-		border-radius: 10px;
-	}
+header img {
+  min-width: 40px;
+  max-width: 80px;
+  width: 100%;
 }
 
-/* the styles for the footer */
 footer {
-	background-color: var(--accent-color);
-	& p {
-		text-align: center;
-		color: white;
-		padding: 1em 0;
-	}
+  text-align: center;
+  border-top: 3px solid #333;
+  margin-top: 1.5em;
+  padding: 1em 0;
+  font-size: 0.9em;
 }
 
-/* CSS class */
-.large {
-	font-size: 125%;
+/* ========== FLEXBOX LAYOUT ========== */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+main aside {
+  flex-basis: 25%;
+  padding: 1em;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+main section {
+  flex-basis: 75%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+/* ========== FEATURED SPEAKER ========== */
+.featured {
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+  padding: 1em 0;
+  margin-top: 1em;
+}
+
+main section img {
+  float: right;
+  margin-left: 1em;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== IMAGE SCALING ========== */
+/* Guest speaker images */
+aside img {
+  width: 100%;
+  min-width: 40px;
+  max-width: 75px;
+  margin-bottom: 1em;
+}
+
+/* Featured speaker image */
+.featured img {
+  width: 100%;
+  min-width: 100px;
+  max-width: 250px;
+}
+
+/* ========== LINKS ========== */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
