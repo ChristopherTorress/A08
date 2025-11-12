@@ -1,69 +1,75 @@
+/* BODY AND GENERAL SETTINGS */
 body {
-    width: 80%;
-    max-width: 1024px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
+  width: 80%;
+  max-width: 1024px;
+  font-size: calc(90% + 0.2vw);
+  line-height: 1.5;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, p, ul {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
 header {
-    text-align: center;
-    line-height: 1.2;
-    padding: 1em 0;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
+/* LOGO IMAGE */
 header img {
-    min-width: 40px;
-    max-width: 80px;
-    width: 100%;
+  width: 100%;
+  min-width: 40px;
+  max-width: 80px;
 }
 
+/* MAIN FLEXBOX LAYOUT */
 main {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
-/* Left Column */
+aside {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+section {
+  flex-basis: 75%;
+  padding: 10px;
+}
+
+/* FEATURED SPEAKER BOX */
+.featured {
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+  padding: 10px 0;
+}
+
+section img {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+/* IMAGE SCALING */
 aside img {
-    min-width: 40px;
-    max-width: 75px;
-    width: 100%;
-    margin-bottom: .25em;
-}
-
-/* Right Column */
-.featured-title {
-    border-top: 2px solid #999;
-    border-bottom: 2px solid #999;
-    padding: .25em 0;
-    margin: 1em 0;
+  width: 100%;
+  min-width: 40px;
+  max-width: 75px;
 }
 
 .featured img {
-    float: right;
-    min-width: 100px;
-    max-width: 250px;
-    width: 100%;
-    margin-left: 1em;
+  width: 100%;
+  min-width: 100px;
+  max-width: 250px;
 }
 
-blockquote {
-    font-style: italic;
-    margin: .5em 0;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
-    text-align: center;
-    font-size: .9em;
-    color: #444;
-    margin: 1em 0;
-}
-
-/* Responsive */
-@media (max-width: 700px) {
-    main {
-        grid-template-columns: 1fr;
-    }
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
 }
